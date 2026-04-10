@@ -1,0 +1,40 @@
+{
+  "name": "obsidian-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for Obsidian vault operations — read, write, search, and navigate notes",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "obsidian-mcp-server": "dist/index.js"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "obsidian",
+    "mcp",
+    "model-context-protocol",
+    "notes",
+    "vault",
+    "markdown"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "gray-matter": "^4.0.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

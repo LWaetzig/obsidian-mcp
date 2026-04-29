@@ -1,6 +1,6 @@
 # obsidian-mcp
 
-An MCP (Model Context Protocol) client that gives AI assistants direct access to your Obsidian vault. Read, write, search, and navigate notes using natural language — with any MCP-compatible client.
+An MCP (Model Context Protocol) Server that gives AI assistants direct access to your Obsidian vault. Read, write, search, and navigate notes using natural language — with any MCP-compatible client.
 
 ## Contents
 

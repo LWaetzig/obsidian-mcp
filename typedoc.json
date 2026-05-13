@@ -1,0 +1,37 @@
+{
+  "name": "Obsidian MCP Server",
+  "entryPoints": ["src"],
+  "entryPointStrategy": "expand",
+  "out": "public",
+  "readme": "README.md",
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "exclude": [
+    "**/.DS_Store",
+    "src/index.ts",
+    "src/utils/**",
+    "src/tools/shared.ts"
+  ],
+  "plugin": ["typedoc-material-theme"],
+  "themeColor": "#7B2FBE",
+  "categorizeByGroup": true,
+  "sort": ["source-order"],
+  "groupOrder": [
+    "Classes",
+    "Interfaces",
+    "Type Aliases",
+    "Enumerations",
+    "Functions",
+    "Variables",
+    "*"
+  ],
+  "externalSymbolLinkMappings": {
+    "@modelcontextprotocol/sdk": {
+      "McpServer": "https://github.com/modelcontextprotocol/typescript-sdk"
+    }
+  },
+  "navigationLinks": {
+    "npm": "https://www.npmjs.com/package/obsidian-mcp-server"
+  }
+}

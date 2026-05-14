@@ -47,7 +47,7 @@ secret_detection:
 build:
   stage: build
   before_script:
-    - npm ci
+    - npm install --no-audit --no-fund
   script:
     - npm run build
   artifacts:
@@ -139,7 +139,7 @@ release:github:
 pages:
   stage: pages
   before_script:
-    - npm ci
+    - npm install --no-audit --no-fund
   script:
     - npm run docs
   artifacts:

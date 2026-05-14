@@ -1,6 +1,6 @@
 {
   "name": "obsidian-mcp-server",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "MCP server for Obsidian vault operations — read, write, search, and navigate notes",
   "type": "module",
   "main": "dist/index.js",

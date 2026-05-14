@@ -118,11 +118,10 @@ release:github:
   before_script:
     - apk add --no-cache curl jq git
     - git config --global --add safe.directory '*'
-    - git remote set-url origin https://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}
-    - git fetch --tags
+    - git clone --depth 1 --tags https://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH} .
   script:
     - |
-      TAG=$(git describe --tags --abbrev=0)
+      TAG=$(git describe --tags --abbrev=0 2>/dev/null || git rev-parse --short HEAD)
       NOTES=$(awk '/^## \[/{if(p)exit; p=1; next} p' CHANGELOG.md)
       curl --fail-with-body -s -X POST \
         -H "Authorization: token ${GITHUB_TOKEN}" \

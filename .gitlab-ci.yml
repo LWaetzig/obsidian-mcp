@@ -118,7 +118,8 @@ release:github:
   before_script:
     - apk add --no-cache curl jq git
     - git config --global --add safe.directory '*'
-    - git clone --depth 1 --tags https://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH} .
+    - git remote set-url origin https://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}
+    - git fetch origin --tags
   script:
     - |
       TAG=$(git describe --tags --abbrev=0 2>/dev/null || git rev-parse --short HEAD)

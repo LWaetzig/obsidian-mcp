@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.1](https://gitlab.com/personal-public-packages/obsidian-mcp/compare/v1.1.0...v1.1.1) (2026-05-14)
+
+
+### Bug Fixes
+
+* fixing pipeline errors ([2f67178](https://gitlab.com/personal-public-packages/obsidian-mcp/commit/2f6717890741c5ea8d58ca9fe44509a645e97de4))
+
 ## 1.1.0 (2026-05-14)
 
 
